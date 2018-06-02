@@ -46,7 +46,7 @@ if EXIST "%AL_APP_NAME%" (
 pushd %AL_APP_NAME%
 cmake -Wno-deprecated -G "Visual Studio 15 2017" -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DAL_APP_FILE=..\..\%AL_APP_FILE% %AL_LIB_PATH%/cmake/single_file
 IF NOT ERRORLEVEL 1 (
-    echo "Visual studio solution for project is written to Project.sln in the above directory"
+    echo == Visual studio .sln for project is written to Project.sln in the above directory
 )
 popd
 popd
