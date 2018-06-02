@@ -56,5 +56,5 @@ if INCREMENTAL_BUILD==0 ( if EXIST %BUILD_DIR% (
 mkdir %BUILD_DIR%
 pushd %BUILD_DIR%
 cmake .. -DCMAKE_BUILD_TYPE=%BUILD_TYPE%
-msbuild allolib.sln /p:Configuration=%BUILD_TYPE% /p:DefineConstants="AL_WINDOWS=1"
+msbuild allolib.sln /p:Configuration=%BUILD_TYPE%
 popd
