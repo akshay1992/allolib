@@ -15,7 +15,6 @@ if [%1]==[] (
 )
 
 rem ------- Script environment --------
-set BUILD_TYPE=Debug
 set AL_APP_FILE=%1
 set AL_APP_NAME=%~n1 
 set AL_LIB_PATH=%cd%
@@ -44,7 +43,7 @@ if EXIST "%AL_APP_NAME%" (
 )
 
 pushd %AL_APP_NAME%
-cmake -Wno-deprecated -G "Visual Studio 15 2017" -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DAL_APP_FILE=..\..\%AL_APP_FILE% %AL_LIB_PATH%/cmake/single_file
+cmake -Wno-deprecated -G "Visual Studio 15 2017" -DAL_APP_FILE=..\..\%AL_APP_FILE% %AL_LIB_PATH%/cmake/single_file
 IF NOT ERRORLEVEL 1 (
     echo == Visual studio .sln for project is written to Project.sln in the above directory
 )
